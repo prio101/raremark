@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(version: 2020_09_26_170902) do
   end
 
   create_table "question_types", force: :cascade do |t|
+    t.integer "question_type", default: 0
     t.bigint "question_id"
     t.bigint "survey_id"
     t.datetime "created_at", precision: 6, null: false
