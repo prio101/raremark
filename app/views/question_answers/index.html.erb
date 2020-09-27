@@ -1,0 +1,24 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Answer</th>
+      <th scope="col">Question</th>
+      <th scope="col">Survey</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @answers.each_with_index do |answer, index| %>
+      <% cache answer do %>
+        <tr>
+          <th scope="row"><%= index + 1 %></th>
+          <td><%= answer.answer %></td>
+          <td><%= answer.question.question %></td>
+          <td><%= link_to answer.survey.name, survey_path(answer.question.id) %></td>
+          <td><%= link_to "Show", question_answer_path(answer)  %></td>
+        </tr>
+      <% end %>   
+    <% end %>
+  </tbody>
+</table>

@@ -1,6 +1,6 @@
 class Api::V1::SurveysController < ApiController
   def index
-    surveys = Survey.all
+    surveys = Survey.where(status: true)
     render json: surveys.to_json( include: [ :questions, :question_types, :question_answers ])
   end
 
