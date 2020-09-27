@@ -1,24 +1,16 @@
-# README
+# Raremark Assignment
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+- Change the `config` over the `database.yml`
+- Use rails credentials to change the username and password for the postgresql.
+  example: `EDITOR=vim rails credentials:edit`
 
-Things you may want to cover:
+- Run `rails db:create`
+- Run `rails db:migrate`
+- Run `rails db:seed`  
 
-* Ruby version
+**Seeder files are chunked in different files**
 
-* System dependencies
+- Run `rails dev:cache` to begin the caching.
+**The first run of the pages needs to cache the fragments, so it will take some time at first time**
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Run `rails server`
