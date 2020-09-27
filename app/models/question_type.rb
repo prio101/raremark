@@ -4,5 +4,5 @@ class QuestionType < ApplicationRecord
 
   enum question_type: [ :text, :single, :multiple ]
 
-  validate_presence_of  :question_type
+  validates_presence_of  :question_type
 end
