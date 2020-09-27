@@ -5,7 +5,7 @@ RSpec.describe QuestionType, type: :model do
   let( :question ) { FactoryGirl.create(:question) }
   let( :question_answer ) { FactoryGirl.create( :question_answer )}
   let( :question_option ) { FactoryGirl.create(  :question_option )}
-  let( :question_type ) { FactoryGirl.create( :question_type ) }
+  let( :question_type ) { FactoryGirl.create( :question_type, question_type: :single ) }
   
   it 'is valid' do
     expect(question_type).to be_valid
