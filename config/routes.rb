@@ -12,5 +12,5 @@ Rails.application.routes.draw do
   # web
   resources :surveys, only: [ :index, :show ]
 
-  get '/answers', to: 'surveys#answers'
+  resources :question_answers, only: [ :index, :show ]
 end

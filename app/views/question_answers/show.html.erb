@@ -1,0 +1,11 @@
+<h2>Answer Details</h2>  
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Answer: <%= @answer.answer %></h5>
+    <p class="card-text">Question: <%= @answer.question.quesion %></p>
+    <p class="card-text">Survey: <%= @answer.survey.name %></p>
+    
+    <%= link_to "Surveys", root_path, class: 'btn btn-primary' %>
+    
+  </div>
+</div>
