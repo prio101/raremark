@@ -11,7 +11,7 @@ class QuestionAnswersController < ApplicationController
   private
 
   def set_answer
-    unless params[:id].blank
+    unless params[:id].blank?
       @answer = QuestionAnswer.find(params[:id])
     end
   end
